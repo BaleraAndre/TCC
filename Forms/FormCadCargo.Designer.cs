@@ -88,9 +88,9 @@
             // 
             this.btnsalvar.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnsalvar.ForeColor = System.Drawing.Color.White;
-            this.btnsalvar.Location = new System.Drawing.Point(833, 522);
+            this.btnsalvar.Location = new System.Drawing.Point(838, 485);
             this.btnsalvar.Name = "btnsalvar";
-            this.btnsalvar.Size = new System.Drawing.Size(141, 61);
+            this.btnsalvar.Size = new System.Drawing.Size(157, 61);
             this.btnsalvar.TabIndex = 59;
             this.btnsalvar.Text = "SALVAR";
             this.btnsalvar.UseVisualStyleBackColor = false;
@@ -121,7 +121,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1177, 690);
+            this.ClientSize = new System.Drawing.Size(1177, 619);
             this.Controls.Add(this.txtCargaHoraria);
             this.Controls.Add(this.txtSalario);
             this.Controls.Add(this.btnsalvar);
@@ -131,10 +131,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtnome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Location = new System.Drawing.Point(189, 70);
+            this.Location = new System.Drawing.Point(165, 1);
             this.MdiChildrenMinimizedAnchorBottom = false;
             this.Name = "FormCadCargo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FormCadCargo";
             this.Load += new System.EventHandler(this.FormCadCargo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtSalario)).EndInit();

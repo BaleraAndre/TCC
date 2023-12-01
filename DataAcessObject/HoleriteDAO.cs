@@ -11,6 +11,39 @@ namespace Folha_Pagamento.DataAcessObject
 {
     public class HoleriteDAO
     {
+        public static List<Holerite> ObterTodos()
+        {
+            SqlConnection conect = ConexaoBD.ConexaoBD.obterConexao();
+            string sql = $"select * from holerite;";
+            SqlCommand command = new SqlCommand(sql, conect);
+            DataSet pessoas = new DataSet();
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+            adapter.Fill(pessoas);
+
+            List<Holerite> listaHolerites = new List<Holerite>(); // Criar uma lista para armazenar os objetos Holerite
+
+            foreach (DataRow row in pessoas.Tables[0].Rows)
+            {
+                Holerite holerite = new Holerite(); // Criar uma nova instância de Holerite para cada registro
+
+                holerite.Id = int.Parse(row["id_holerite"].ToString());
+                holerite.Id_Holerite = int.Parse(row["id_funcionario"].ToString());
+                holerite.Inss = double.Parse(row["inss"].ToString());
+                holerite.Fgts = double.Parse(row["fgts"].ToString());
+                holerite.Data_Adimissao_Funcionario = DateTime.Parse(row["data_adimissao"].ToString());
+                holerite.Mes_Ano_Pagamento = DateTime.Parse(row["mes_ano"].ToString());
+                holerite.Salario_Liquido = double.Parse(row["salario_liquido"].ToString());
+                holerite.Salario_Bruto = double.Parse(row["salario_bruto"].ToString());
+                holerite.Desc_Dias = double.Parse(row["desc_dias"].ToString());
+                holerite.Cargo = row["cargo"].ToString();
+                holerite.Data_Emissao = DateTime.Parse(row["data_emissao"].ToString());
+                holerite.Nome_Funcionario = row["nome_funcionario"].ToString();
+
+                listaHolerites.Add(holerite); // Adicionar o objeto Holerite à lista
+            }
+            return listaHolerites;
+        }
         public static Holerite BuscarPorNomeEData(string nome, DateTime data)
         {
             Holerite holerite = new Holerite();

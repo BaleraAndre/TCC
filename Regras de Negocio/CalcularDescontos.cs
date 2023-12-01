@@ -43,37 +43,47 @@ namespace Folha_Pagamento.Regras_de_Negocio
             return desconto;
         }
 
-        public static double CalcularDescontoIRRF(double salarioBruto)
+        public static double CalcularIRRF(double salarioBruto)
         {
+            // Definindo as faixas de renda e as respectivas alíquotas
             double[] faixas = { 1903.98, 2826.65, 3751.05, 4664.68 };
-            double[] aliquotas = { 0, 7.5, 15, 22.5, 27.5 };
+            double[] aliquotas = { 0.0, 0.075, 0.15, 0.225, 0.275 };
 
-            double descontoIRRF = 0;
-
+            // Calculando o valor do imposto de renda
+            double imposto = 0.0;
             double salarioBase = salarioBruto;
 
             for (int i = 0; i < faixas.Length; i++)
             {
                 if (salarioBase <= faixas[i])
                 {
-                    descontoIRRF = salarioBase * (aliquotas[i] / 100);
+                    imposto += salarioBase * aliquotas[i];
                     break;
                 }
-
-                salarioBase -= faixas[i];
+                else
+                {
+                    imposto += faixas[i] * aliquotas[i];
+                    salarioBase -= faixas[i];
+                }
             }
 
-            return descontoIRRF;
+            return imposto;
         }
 
         public static double CalcularHorasTrabalhadas(double SalarioB, double Horastrabalhadas, double CargaHoraria)
         {
+            
+            
+            
+            
             double TotalReceber = SalarioB / CargaHoraria;
             TotalReceber = TotalReceber * Horastrabalhadas;
-            TotalReceber = SalarioB - TotalReceber;
+           
             return TotalReceber;
 
         }
+
+
 
 
 

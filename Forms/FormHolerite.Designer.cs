@@ -30,9 +30,11 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbldataemissaoholerite = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -247,9 +249,9 @@
             this.panel3.Controls.Add(this.lblmesano);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Location = new System.Drawing.Point(698, 1);
+            this.panel3.Location = new System.Drawing.Point(698, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(229, 109);
+            this.panel3.Size = new System.Drawing.Size(229, 107);
             this.panel3.TabIndex = 1;
             // 
             // lblmesano
@@ -286,7 +288,7 @@
             // dgvInformacoes
             // 
             this.dgvInformacoes.AllowUserToDeleteRows = false;
-            this.dgvInformacoes.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvInformacoes.BackgroundColor = System.Drawing.Color.White;
             this.dgvInformacoes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
             this.dgvInformacoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInformacoes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -295,10 +297,27 @@
             this.referencia,
             this.vencimentos,
             this.descontos});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInformacoes.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvInformacoes.Location = new System.Drawing.Point(3, 154);
             this.dgvInformacoes.MultiSelect = false;
             this.dgvInformacoes.Name = "dgvInformacoes";
             this.dgvInformacoes.ReadOnly = true;
+            this.dgvInformacoes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInformacoes.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvInformacoes.RowHeadersVisible = false;
             this.dgvInformacoes.RowTemplate.DividerHeight = 1;
             this.dgvInformacoes.RowTemplate.Height = 25;
@@ -311,8 +330,8 @@
             // codigo
             // 
             this.codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.codigo.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.codigo.DefaultCellStyle = dataGridViewCellStyle1;
             this.codigo.FillWeight = 50F;
             this.codigo.HeaderText = "Cod";
             this.codigo.Name = "codigo";
@@ -322,8 +341,8 @@
             // descricao
             // 
             this.descricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.descricao.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.descricao.DefaultCellStyle = dataGridViewCellStyle2;
             this.descricao.FillWeight = 300F;
             this.descricao.HeaderText = "Descrição";
             this.descricao.Name = "descricao";
@@ -333,8 +352,8 @@
             // referencia
             // 
             this.referencia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.referencia.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.referencia.DefaultCellStyle = dataGridViewCellStyle3;
             this.referencia.FillWeight = 110F;
             this.referencia.HeaderText = "Referencia";
             this.referencia.Name = "referencia";
@@ -344,8 +363,9 @@
             // vencimentos
             // 
             this.vencimentos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.vencimentos.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.vencimentos.DefaultCellStyle = dataGridViewCellStyle4;
             this.vencimentos.FillWeight = 230F;
             this.vencimentos.HeaderText = "Vencimentos";
             this.vencimentos.Name = "vencimentos";
@@ -355,9 +375,9 @@
             // descontos
             // 
             this.descontos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.descontos.DefaultCellStyle = dataGridViewCellStyle10;
-            this.descontos.FillWeight = 230F;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.descontos.DefaultCellStyle = dataGridViewCellStyle5;
             this.descontos.HeaderText = "Descontos";
             this.descontos.Name = "descontos";
             this.descontos.ReadOnly = true;
@@ -396,7 +416,7 @@
             // 
             // txtdescontos
             // 
-            this.txtdescontos.Location = new System.Drawing.Point(700, 0);
+            this.txtdescontos.Location = new System.Drawing.Point(700, -1);
             this.txtdescontos.Multiline = true;
             this.txtdescontos.Name = "txtdescontos";
             this.txtdescontos.Size = new System.Drawing.Size(218, 35);
@@ -404,10 +424,10 @@
             // 
             // txtsalariobruto
             // 
-            this.txtsalariobruto.Location = new System.Drawing.Point(462, 0);
+            this.txtsalariobruto.Location = new System.Drawing.Point(477, -1);
             this.txtsalariobruto.Multiline = true;
             this.txtsalariobruto.Name = "txtsalariobruto";
-            this.txtsalariobruto.Size = new System.Drawing.Size(236, 35);
+            this.txtsalariobruto.Size = new System.Drawing.Size(218, 36);
             this.txtsalariobruto.TabIndex = 0;
             // 
             // panel5
@@ -574,6 +594,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(948, 592);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -585,7 +606,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormHolerite";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormHolerite";
+            this.Text = "Holerite";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -628,11 +649,6 @@
         private Label label11;
         private Label label10;
         private Label label9;
-        private DataGridViewTextBoxColumn codigo;
-        private DataGridViewTextBoxColumn descricao;
-        private DataGridViewTextBoxColumn referencia;
-        private DataGridViewTextBoxColumn vencimentos;
-        private DataGridViewTextBoxColumn descontos;
         private Label lblirrf;
         private Label lblfgts2;
         private Label lblfgts;
@@ -650,5 +666,10 @@
         private TextBox txtdescontos;
         private TextBox txtsalariobruto;
         private Label label5;
+        private DataGridViewTextBoxColumn codigo;
+        private DataGridViewTextBoxColumn descricao;
+        private DataGridViewTextBoxColumn referencia;
+        private DataGridViewTextBoxColumn vencimentos;
+        private DataGridViewTextBoxColumn descontos;
     }
 }

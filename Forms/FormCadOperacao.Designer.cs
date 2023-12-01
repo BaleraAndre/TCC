@@ -132,10 +132,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtnome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Location = new System.Drawing.Point(189, 70);
+            this.Location = new System.Drawing.Point(165, 1);
             this.MdiChildrenMinimizedAnchorBottom = false;
             this.Name = "FormCadOperacao";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FormCadOperacao";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1016,6 +1016,15 @@
         QmCC
 </value>
   </data>
+  <data name="pictureBox12.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAL1JREFUSEvt
+        kjsOwjAQRH0eLkCbK1BwDFqUkgNwIDoqJOqIhtPArORZhVlHwgFLKfKkV3hn7fiTtLJYTvAKXzO1ubbG
+        JA9YmlijrTHJ142CbszRAselo27hPbu3wgi9WkcLoSGzgcxoDxVmjhZCQ+YCmdEBKswcLYSGzA0yo0+o
+        MHO0EBoyO8iMnqHCzNECx6VHPkA+8hF2kFQ/stnkN9XGOX5sjEWiR601XC2DZjT/wD/unBb59c7HriyK
+        lN7NJMR58ZsnxgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="pictureBox11.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAY9JREFUSEvd

@@ -35,7 +35,8 @@ namespace Folha_Pagamento.Forms
 
         private void FormSalvarHolerite_Load(object sender, EventArgs e)
         {
-            Forms.FormHolerite form = new FormHolerite(h);
+            double a = 0;
+            Forms.FormHolerite form = new FormHolerite(h,a);
             form.Show();
         }
 

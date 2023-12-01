@@ -135,6 +135,7 @@
             this.btnentrar.TabIndex = 7;
             this.btnentrar.Text = "Entrar";
             this.btnentrar.UseVisualStyleBackColor = false;
+            this.btnentrar.Click += new System.EventHandler(this.btnentrar_Click);
             // 
             // llesqueciminhasenha
             // 
@@ -146,6 +147,7 @@
             this.llesqueciminhasenha.TabIndex = 8;
             this.llesqueciminhasenha.TabStop = true;
             this.llesqueciminhasenha.Text = "Esqueci minha senha";
+            this.llesqueciminhasenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llesqueciminhasenha_LinkClicked);
             // 
             // FormLogin
             // 

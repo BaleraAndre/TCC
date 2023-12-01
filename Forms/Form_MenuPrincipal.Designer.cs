@@ -44,10 +44,13 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnpesquisar = new System.Windows.Forms.Button();
             this.pnlmeio = new System.Windows.Forms.Panel();
+            this.lblFuncionario = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnrelatorio = new System.Windows.Forms.Button();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.llinicio = new System.Windows.Forms.LinkLabel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -57,13 +60,13 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.lblFuncionario = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.pnlmeio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -177,6 +180,7 @@
             this.button7.Text = "Operação";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button1
             // 
@@ -211,6 +215,7 @@
             this.button5.Text = "Cargo";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // btnholerite
             // 
@@ -221,7 +226,7 @@
             this.btnholerite.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.btnholerite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnholerite.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnholerite.Location = new System.Drawing.Point(-3, 461);
+            this.btnholerite.Location = new System.Drawing.Point(-3, 443);
             this.btnholerite.Name = "btnholerite";
             this.btnholerite.Size = new System.Drawing.Size(180, 48);
             this.btnholerite.TabIndex = 5;
@@ -238,7 +243,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(35, 554);
+            this.button3.Location = new System.Drawing.Point(35, 524);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(150, 52);
             this.button3.TabIndex = 12;
@@ -255,7 +260,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button6.Location = new System.Drawing.Point(39, 514);
+            this.button6.Location = new System.Drawing.Point(39, 484);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(153, 35);
             this.button6.TabIndex = 6;
@@ -315,6 +320,16 @@
             this.pnlmeio.Size = new System.Drawing.Size(1174, 687);
             this.pnlmeio.TabIndex = 12;
             // 
+            // lblFuncionario
+            // 
+            this.lblFuncionario.AutoSize = true;
+            this.lblFuncionario.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblFuncionario.Location = new System.Drawing.Point(831, 60);
+            this.lblFuncionario.Name = "lblFuncionario";
+            this.lblFuncionario.Size = new System.Drawing.Size(230, 45);
+            this.lblFuncionario.TabIndex = 15;
+            this.lblFuncionario.Text = "Andre Marino";
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Location = new System.Drawing.Point(3, 660);
@@ -347,6 +362,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnrelatorio);
+            this.panel1.Controls.Add(this.pictureBox12);
             this.panel1.Controls.Add(this.llinicio);
             this.panel1.Controls.Add(this.btnCadOperacao);
             this.panel1.Controls.Add(this.button3);
@@ -372,6 +389,34 @@
             this.panel1.Size = new System.Drawing.Size(197, 676);
             this.panel1.TabIndex = 16;
             // 
+            // btnrelatorio
+            // 
+            this.btnrelatorio.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnrelatorio.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnrelatorio.FlatAppearance.BorderSize = 0;
+            this.btnrelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnrelatorio.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnrelatorio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnrelatorio.Location = new System.Drawing.Point(35, 592);
+            this.btnrelatorio.Name = "btnrelatorio";
+            this.btnrelatorio.Size = new System.Drawing.Size(153, 35);
+            this.btnrelatorio.TabIndex = 16;
+            this.btnrelatorio.Text = "Relatorio";
+            this.btnrelatorio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnrelatorio.UseVisualStyleBackColor = false;
+            this.btnrelatorio.Click += new System.EventHandler(this.btnrelatorio_Click);
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(3, 595);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(33, 32);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 17;
+            this.pictureBox12.TabStop = false;
+            // 
             // llinicio
             // 
             this.llinicio.AutoSize = true;
@@ -389,7 +434,7 @@
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.DodgerBlue;
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(3, 566);
+            this.pictureBox11.Location = new System.Drawing.Point(3, 536);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(33, 32);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -400,7 +445,7 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.DodgerBlue;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(3, 517);
+            this.pictureBox8.Location = new System.Drawing.Point(3, 487);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(33, 32);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -473,16 +518,6 @@
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
-            // lblFuncionario
-            // 
-            this.lblFuncionario.AutoSize = true;
-            this.lblFuncionario.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblFuncionario.Location = new System.Drawing.Point(831, 60);
-            this.lblFuncionario.Name = "lblFuncionario";
-            this.lblFuncionario.Size = new System.Drawing.Size(230, 45);
-            this.lblFuncionario.TabIndex = 15;
-            this.lblFuncionario.Text = "Andre Marino";
-            // 
             // Form_MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -508,6 +543,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -550,5 +586,7 @@
         private PictureBox pictureBox4;
         private LinkLabel llinicio;
         private Label lblFuncionario;
+        private Button btnrelatorio;
+        private PictureBox pictureBox12;
     }
 }

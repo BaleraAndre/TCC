@@ -56,12 +56,12 @@
             this.column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGerar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.dgvBancodehoras = new System.Windows.Forms.DataGridView();
             this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cargahorarioacumprir = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Totalhorastrabalhadas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOperacoes)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvValor)).BeginInit();
@@ -92,7 +92,7 @@
             this.Telefone,
             this.CPF});
             this.dgvOperacoes.EnableHeadersVisualStyles = false;
-            this.dgvOperacoes.Location = new System.Drawing.Point(12, 102);
+            this.dgvOperacoes.Location = new System.Drawing.Point(3, 102);
             this.dgvOperacoes.Name = "dgvOperacoes";
             this.dgvOperacoes.RowHeadersVisible = false;
             this.dgvOperacoes.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -175,14 +175,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1177, 56);
+            this.panel1.Size = new System.Drawing.Size(1188, 56);
             this.panel1.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Location = new System.Drawing.Point(3, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(145, 20);
             this.label1.TabIndex = 1;
@@ -190,14 +190,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(159, 14);
+            this.textBox1.Location = new System.Drawing.Point(150, 14);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(196, 23);
             this.textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 67);
+            this.textBox2.Location = new System.Drawing.Point(3, 67);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(221, 23);
             this.textBox2.TabIndex = 3;
@@ -345,7 +345,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancelar.Location = new System.Drawing.Point(1061, 604);
+            this.btnCancelar.Location = new System.Drawing.Point(1052, 604);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(104, 39);
             this.btnCancelar.TabIndex = 6;
@@ -358,24 +358,13 @@
             this.btnGerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerar.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGerar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGerar.Location = new System.Drawing.Point(922, 604);
+            this.btnGerar.Location = new System.Drawing.Point(913, 604);
             this.btnGerar.Name = "btnGerar";
             this.btnGerar.Size = new System.Drawing.Size(100, 39);
             this.btnGerar.TabIndex = 7;
             this.btnGerar.Text = "Gerar";
             this.btnGerar.UseVisualStyleBackColor = true;
             this.btnGerar.Click += new System.EventHandler(this.btnGerar_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(12, 395);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(626, 47);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Insira a carga horaria cumprida pelo funcionario clicanco aqui";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvBancodehoras
             // 
@@ -398,7 +387,7 @@
             this.Totalhorastrabalhadas,
             this.Dias});
             this.dgvBancodehoras.EnableHeadersVisualStyles = false;
-            this.dgvBancodehoras.Location = new System.Drawing.Point(12, 485);
+            this.dgvBancodehoras.Location = new System.Drawing.Point(3, 414);
             this.dgvBancodehoras.Name = "dgvBancodehoras";
             this.dgvBancodehoras.RowHeadersVisible = false;
             this.dgvBancodehoras.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -411,7 +400,7 @@
             this.dgvBancodehoras.RowTemplate.Height = 25;
             this.dgvBancodehoras.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvBancodehoras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvBancodehoras.Size = new System.Drawing.Size(626, 123);
+            this.dgvBancodehoras.Size = new System.Drawing.Size(626, 194);
             this.dgvBancodehoras.TabIndex = 10;
             // 
             // Cargo
@@ -445,14 +434,17 @@
             this.Dias.Name = "Dias";
             this.Dias.Width = 120;
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.ValidateNames = false;
+            // 
             // FormHoleriteGerar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(1177, 690);
+            this.ClientSize = new System.Drawing.Size(1188, 650);
             this.Controls.Add(this.dgvBancodehoras);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGerar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.dgvsalario);
@@ -461,8 +453,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvOperacoes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Location = new System.Drawing.Point(189, 70);
-            this.MdiChildrenMinimizedAnchorBottom = false;
+            this.Location = new System.Drawing.Point(200, 85);
             this.Name = "FormHoleriteGerar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FormHoleriteGerar";
@@ -499,11 +490,11 @@
         private DataGridViewTextBoxColumn column2;
         private Button btnCancelar;
         private Button btnGerar;
-        private Button button1;
         private DataGridView dgvBancodehoras;
         private DataGridViewTextBoxColumn Cargo;
         private DataGridViewTextBoxColumn Cargahorarioacumprir;
         private DataGridViewTextBoxColumn Totalhorastrabalhadas;
         private DataGridViewTextBoxColumn Dias;
+        private SaveFileDialog saveFileDialog1;
     }
 }

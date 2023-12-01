@@ -1,4 +1,5 @@
 ﻿using Folha_Pagamento.Entidades;
+using iText.StyledXmlParser.Jsoup.Nodes;
 using Microsoft.Data.SqlClient;
 using System;
 using System.Collections;
@@ -13,6 +14,38 @@ namespace Folha_Pagamento.DataAcessObject
 {
     public class FuncionarioDAO
     {
+        public static Funcionario FuncionariosdoRH(string email,string senha)
+        {
+            Funcionario funcionario = new Funcionario();
+            try
+            {
+                SqlConnection conect = ConexaoBD.ConexaoBD.obterConexao();
+                string sql = $"select * from funcionarios where email='{email}' and senha='{senha}' and cargo = 'Recursos Humano';";
+
+                SqlCommand command = new SqlCommand(sql, conect);
+                DataSet pessoas = new DataSet();
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                adapter.Fill(pessoas);
+
+                foreach (DataRow row in pessoas.Tables[0].Rows)
+                {
+                    
+                    funcionario.Senha = row["senha"].ToString();
+                    funcionario.Nome_Completo = row["nome_completo"].ToString();
+                    funcionario.Email = row["email"].ToString();
+                }
+                
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Email ou Senha invalido" );
+            }
+            
+            return funcionario;
+        }
+
 
         public static bool InserirFuncionario(Funcionario funcionario)
         {
@@ -141,7 +174,7 @@ namespace Folha_Pagamento.DataAcessObject
         {
             SqlConnection conect = ConexaoBD.ConexaoBD.obterConexao();
             string sql = $"DELETE FROM funcionarios WHERE nome_completo = '{nome}';";
-            
+            conect.Open();
 
             SqlCommand command = new SqlCommand(sql, conect);
             int removeu = command.ExecuteNonQuery();

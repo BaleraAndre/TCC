@@ -25,12 +25,12 @@ namespace Folha_Pagamento.Forms
                 MessageBox.Show("Digite o nome e a data");
                 return;
             }
-            
+            double a = 0;
             string nome = txtFuncionario.Text;
             DateTime data = dateTimePicker1.Value;
             Holerite holerite = new Holerite();
             holerite = DataAcessObject.HoleriteDAO.BuscarPorNomeEData(nome, data);
-            Forms.FormHolerite form = new FormHolerite(holerite);
+            Forms.FormHolerite form = new FormHolerite(holerite,a);
             form.ShowDialog();
 
         }

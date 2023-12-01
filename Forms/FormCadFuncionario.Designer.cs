@@ -40,8 +40,6 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,8 +56,6 @@
             this.txtDatadeadimissao = new System.Windows.Forms.MaskedTextBox();
             this.cbRegimetrabalhista = new System.Windows.Forms.ComboBox();
             this.cbRegimeprevidenciario = new System.Windows.Forms.ComboBox();
-            this.cbCategoria = new System.Windows.Forms.ComboBox();
-            this.cbClasse = new System.Windows.Forms.ComboBox();
             this.nudSalario = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -69,8 +65,6 @@
             this.label34 = new System.Windows.Forms.Label();
             this.cbGrauEscolaridade = new System.Windows.Forms.ComboBox();
             this.txtsexo = new System.Windows.Forms.TextBox();
-            this.txtTelefone2 = new System.Windows.Forms.MaskedTextBox();
-            this.lbltelefone2 = new System.Windows.Forms.Label();
             this.txtPaisdeorigem = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtDatadenascimento = new System.Windows.Forms.MaskedTextBox();
@@ -100,7 +94,7 @@
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btncadastrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -183,7 +177,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(346, 82);
+            this.label24.Location = new System.Drawing.Point(319, 25);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(45, 15);
             this.label24.TabIndex = 23;
@@ -216,24 +210,6 @@
             this.label27.TabIndex = 26;
             this.label27.Text = "Regime Previdenciário:";
             // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(328, 30);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(61, 15);
-            this.label28.TabIndex = 27;
-            this.label28.Text = "Categoria:";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(346, 59);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(43, 15);
-            this.label29.TabIndex = 28;
-            this.label29.Text = "Classe:";
-            // 
             // label30
             // 
             this.label30.AutoSize = true;
@@ -246,7 +222,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(0, 578);
+            this.label32.Location = new System.Drawing.Point(57, 542);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(26, 15);
             this.label32.TabIndex = 31;
@@ -307,14 +283,14 @@
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(412, 570);
+            this.txtSenha.Location = new System.Drawing.Point(327, 449);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(136, 23);
+            this.txtSenha.Size = new System.Drawing.Size(202, 23);
             this.txtSenha.TabIndex = 45;
             // 
             // txtPis
             // 
-            this.txtPis.Location = new System.Drawing.Point(33, 570);
+            this.txtPis.Location = new System.Drawing.Point(90, 534);
             this.txtPis.Name = "txtPis";
             this.txtPis.Size = new System.Drawing.Size(184, 23);
             this.txtPis.TabIndex = 47;
@@ -374,28 +350,10 @@
             this.cbRegimeprevidenciario.Size = new System.Drawing.Size(248, 23);
             this.cbRegimeprevidenciario.TabIndex = 65;
             // 
-            // cbCategoria
-            // 
-            this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCategoria.FormattingEnabled = true;
-            this.cbCategoria.Location = new System.Drawing.Point(394, 22);
-            this.cbCategoria.Name = "cbCategoria";
-            this.cbCategoria.Size = new System.Drawing.Size(144, 23);
-            this.cbCategoria.TabIndex = 66;
-            // 
-            // cbClasse
-            // 
-            this.cbClasse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbClasse.FormattingEnabled = true;
-            this.cbClasse.Location = new System.Drawing.Point(395, 51);
-            this.cbClasse.Name = "cbClasse";
-            this.cbClasse.Size = new System.Drawing.Size(144, 23);
-            this.cbClasse.TabIndex = 67;
-            // 
             // nudSalario
             // 
             this.nudSalario.DecimalPlaces = 2;
-            this.nudSalario.Location = new System.Drawing.Point(395, 80);
+            this.nudSalario.Location = new System.Drawing.Point(368, 23);
             this.nudSalario.Name = "nudSalario";
             this.nudSalario.Size = new System.Drawing.Size(120, 23);
             this.nudSalario.TabIndex = 69;
@@ -430,11 +388,7 @@
             this.groupBox2.Controls.Add(this.nudSalario);
             this.groupBox2.Controls.Add(this.label26);
             this.groupBox2.Controls.Add(this.label27);
-            this.groupBox2.Controls.Add(this.cbClasse);
             this.groupBox2.Controls.Add(this.cbRegimetrabalhista);
-            this.groupBox2.Controls.Add(this.cbCategoria);
-            this.groupBox2.Controls.Add(this.label28);
-            this.groupBox2.Controls.Add(this.label29);
             this.groupBox2.Controls.Add(this.cbRegimeprevidenciario);
             this.groupBox2.Controls.Add(this.txtSindicato);
             this.groupBox2.Controls.Add(this.label30);
@@ -450,11 +404,6 @@
             // 
             this.cbcargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbcargo.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.cbcargo.Items.AddRange(new object[] {
-            "Pardo",
-            "Negro",
-            "Amarelo",
-            "Branco"});
             this.cbcargo.Location = new System.Drawing.Point(140, 82);
             this.cbcargo.Name = "cbcargo";
             this.cbcargo.Size = new System.Drawing.Size(200, 23);
@@ -467,8 +416,6 @@
             this.groupBox3.Controls.Add(this.label34);
             this.groupBox3.Controls.Add(this.cbGrauEscolaridade);
             this.groupBox3.Controls.Add(this.txtsexo);
-            this.groupBox3.Controls.Add(this.txtTelefone2);
-            this.groupBox3.Controls.Add(this.lbltelefone2);
             this.groupBox3.Controls.Add(this.txtSenha);
             this.groupBox3.Controls.Add(this.txtPis);
             this.groupBox3.Controls.Add(this.txtPaisdeorigem);
@@ -516,7 +463,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(361, 578);
+            this.label34.Location = new System.Drawing.Point(276, 457);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(42, 15);
             this.label34.TabIndex = 70;
@@ -533,7 +480,7 @@
             "Ensino médio completo",
             "Superior incompleto ",
             "Superior completo"});
-            this.cbGrauEscolaridade.Location = new System.Drawing.Point(385, 523);
+            this.cbGrauEscolaridade.Location = new System.Drawing.Point(385, 492);
             this.cbGrauEscolaridade.Name = "cbGrauEscolaridade";
             this.cbGrauEscolaridade.Size = new System.Drawing.Size(144, 23);
             this.cbGrauEscolaridade.TabIndex = 98;
@@ -544,24 +491,6 @@
             this.txtsexo.Name = "txtsexo";
             this.txtsexo.Size = new System.Drawing.Size(200, 23);
             this.txtsexo.TabIndex = 97;
-            // 
-            // txtTelefone2
-            // 
-            this.txtTelefone2.Location = new System.Drawing.Point(353, 255);
-            this.txtTelefone2.Mask = "(00)0000-9999";
-            this.txtTelefone2.Name = "txtTelefone2";
-            this.txtTelefone2.Size = new System.Drawing.Size(141, 23);
-            this.txtTelefone2.TabIndex = 96;
-            // 
-            // lbltelefone2
-            // 
-            this.lbltelefone2.AutoSize = true;
-            this.lbltelefone2.Location = new System.Drawing.Point(269, 263);
-            this.lbltelefone2.Name = "lbltelefone2";
-            this.lbltelefone2.Size = new System.Drawing.Size(79, 15);
-            this.lbltelefone2.TabIndex = 95;
-            this.lbltelefone2.Text = "Telefone Fixo:";
-            this.lbltelefone2.Visible = false;
             // 
             // txtPaisdeorigem
             // 
@@ -579,7 +508,7 @@
             // 
             // txtDatadenascimento
             // 
-            this.txtDatadenascimento.Location = new System.Drawing.Point(133, 523);
+            this.txtDatadenascimento.Location = new System.Drawing.Point(133, 492);
             this.txtDatadenascimento.Mask = "00/00/0000";
             this.txtDatadenascimento.Name = "txtDatadenascimento";
             this.txtDatadenascimento.Size = new System.Drawing.Size(117, 23);
@@ -714,7 +643,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(269, 531);
+            this.label18.Location = new System.Drawing.Point(269, 500);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(109, 15);
             this.label18.TabIndex = 77;
@@ -759,7 +688,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 531);
+            this.label7.Location = new System.Drawing.Point(12, 500);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 15);
             this.label7.TabIndex = 72;
@@ -768,11 +697,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(254, 228);
+            this.label5.Location = new System.Drawing.Point(295, 228);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 15);
+            this.label5.Size = new System.Drawing.Size(51, 15);
             this.label5.TabIndex = 71;
-            this.label5.Text = "Telefone Celular:";
+            this.label5.Text = "Telefone";
             // 
             // label4
             // 
@@ -822,21 +751,21 @@
             this.label37.TabIndex = 75;
             this.label37.Text = "Informações trabalhista:";
             // 
-            // button1
+            // btncadastrar
             // 
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(776, 552);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 74);
-            this.button1.TabIndex = 76;
-            this.button1.Text = "Registrar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btncadastrar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btncadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncadastrar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btncadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btncadastrar.Image")));
+            this.btncadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncadastrar.Location = new System.Drawing.Point(995, 539);
+            this.btncadastrar.Name = "btncadastrar";
+            this.btncadastrar.Size = new System.Drawing.Size(180, 74);
+            this.btncadastrar.TabIndex = 76;
+            this.btncadastrar.Text = "Registrar";
+            this.btncadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btncadastrar.UseVisualStyleBackColor = false;
+            this.btncadastrar.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -897,7 +826,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btncadastrar);
             this.Controls.Add(this.label37);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.label35);
@@ -908,11 +837,11 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.Location = new System.Drawing.Point(80, 15);
+            this.Location = new System.Drawing.Point(165, 1);
             this.MdiChildrenMinimizedAnchorBottom = false;
             this.Name = "FormCadFuncionario";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Novo Registro";
             ((System.ComponentModel.ISupportInitialize)(this.nudSalario)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -944,8 +873,6 @@
         private Label label25;
         private Label label26;
         private Label label27;
-        private Label label28;
-        private Label label29;
         private Label label30;
         private Label label32;
         private Label label2;
@@ -962,16 +889,12 @@
         private MaskedTextBox txtDatadeadimissao;
         private ComboBox cbRegimetrabalhista;
         private ComboBox cbRegimeprevidenciario;
-        private ComboBox cbCategoria;
-        private ComboBox cbClasse;
         private NumericUpDown nudSalario;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private GroupBox groupBox3;
         private ComboBox cbGrauEscolaridade;
         private TextBox txtsexo;
-        private MaskedTextBox txtTelefone2;
-        private Label lbltelefone2;
         private TextBox txtPaisdeorigem;
         private TextBox txtEmail;
         private MaskedTextBox txtDatadenascimento;
@@ -1002,7 +925,7 @@
         private Label label35;
         private Label label36;
         private Label label37;
-        private Button button1;
+        private Button btncadastrar;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;

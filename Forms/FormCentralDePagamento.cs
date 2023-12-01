@@ -41,7 +41,9 @@ namespace Folha_Pagamento.Forms
                 
                 Funcionario funcionario = Folha_Pagamento.DataAcessObject.FuncionarioDAO.ObterPorNome(Nome);
                 Forms.FormHoleriteGerar form = new FormHoleriteGerar(funcionario);
+                //form.MdiParent = this;
                 form.Show();
+                
             }
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Folha_Pagamento.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -130,6 +131,31 @@ namespace Folha_Pagamento.Forms
             FecharChilds();
 
             pnlmeio.Visible = true;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Forms.FormReg_Cargo form = new FormReg_Cargo();
+            FecharChilds();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void btnrelatorio_Click(object sender, EventArgs e)
+        {
+            FecharPnlPrincipal();
+            FecharChilds();
+            Forms.FormRelatorio form = new Forms.FormRelatorio();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            Forms.FormReg_Cargo form = new FormReg_Cargo();
+            FecharChilds();
+            form.MdiParent = this;
+            form.Show();
         }
     }
 }

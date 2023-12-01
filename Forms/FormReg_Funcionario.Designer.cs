@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReg_Funcionario));
             this.dgvreg = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,12 +58,31 @@
             this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnsalvaralteracoes = new System.Windows.Forms.Button();
-            this.btnpesquisar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnfiltrarregistros = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtcidade = new System.Windows.Forms.TextBox();
+            this.txtcargo = new System.Windows.Forms.TextBox();
+            this.txtbairro = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnbuscarcolaborador = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtcpf = new System.Windows.Forms.MaskedTextBox();
+            this.txtnome = new System.Windows.Forms.TextBox();
+            this.txtemail = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnbuscartodos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvreg)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,14 +95,14 @@
             this.dgvreg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvreg.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvreg.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvreg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvreg.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvreg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvreg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -111,12 +131,12 @@
             this.Bairro,
             this.Cidade});
             this.dgvreg.EnableHeadersVisualStyles = false;
-            this.dgvreg.Location = new System.Drawing.Point(42, 60);
+            this.dgvreg.Location = new System.Drawing.Point(17, 60);
             this.dgvreg.Name = "dgvreg";
             this.dgvreg.RowHeadersVisible = false;
             this.dgvreg.RowTemplate.Height = 25;
             this.dgvreg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvreg.Size = new System.Drawing.Size(1200, 518);
+            this.dgvreg.Size = new System.Drawing.Size(1239, 373);
             this.dgvreg.TabIndex = 0;
             this.dgvreg.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvreg_CellDoubleClick);
             // 
@@ -346,62 +366,203 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(71, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(302, 32);
+            this.label1.Size = new System.Drawing.Size(354, 32);
             this.label1.TabIndex = 1;
-            this.label1.Text = "REGISTRO DE CADASTRO";
+            this.label1.Text = "REGISTRO DE FUNCIONARIOS";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel1.Controls.Add(this.btnsalvaralteracoes);
-            this.panel1.Controls.Add(this.btnpesquisar);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 584);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Location = new System.Drawing.Point(0, 432);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1170, 106);
+            this.panel1.Size = new System.Drawing.Size(1170, 205);
             this.panel1.TabIndex = 2;
             // 
-            // btnsalvaralteracoes
+            // panel4
             // 
-            this.btnsalvaralteracoes.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnsalvaralteracoes.FlatAppearance.BorderSize = 0;
-            this.btnsalvaralteracoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnsalvaralteracoes.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnsalvaralteracoes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnsalvaralteracoes.Location = new System.Drawing.Point(1014, 20);
-            this.btnsalvaralteracoes.Name = "btnsalvaralteracoes";
-            this.btnsalvaralteracoes.Size = new System.Drawing.Size(154, 31);
-            this.btnsalvaralteracoes.TabIndex = 2;
-            this.btnsalvaralteracoes.Text = "Salvar alterações";
-            this.btnsalvaralteracoes.UseVisualStyleBackColor = false;
+            this.panel4.BackColor = System.Drawing.SystemColors.Control;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.btnfiltrarregistros);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.txtcidade);
+            this.panel4.Controls.Add(this.txtcargo);
+            this.panel4.Controls.Add(this.txtbairro);
+            this.panel4.Location = new System.Drawing.Point(595, 13);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(563, 154);
+            this.panel4.TabIndex = 10;
             // 
-            // btnpesquisar
+            // btnfiltrarregistros
             // 
-            this.btnpesquisar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnpesquisar.FlatAppearance.BorderSize = 0;
-            this.btnpesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnpesquisar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnpesquisar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnpesquisar.Location = new System.Drawing.Point(370, 7);
-            this.btnpesquisar.Name = "btnpesquisar";
-            this.btnpesquisar.Size = new System.Drawing.Size(98, 35);
-            this.btnpesquisar.TabIndex = 1;
-            this.btnpesquisar.Text = "Pesquisar";
-            this.btnpesquisar.UseVisualStyleBackColor = false;
+            this.btnfiltrarregistros.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnfiltrarregistros.Image = ((System.Drawing.Image)(resources.GetObject("btnfiltrarregistros.Image")));
+            this.btnfiltrarregistros.Location = new System.Drawing.Point(480, 60);
+            this.btnfiltrarregistros.Name = "btnfiltrarregistros";
+            this.btnfiltrarregistros.Size = new System.Drawing.Size(75, 63);
+            this.btnfiltrarregistros.TabIndex = 15;
+            this.btnfiltrarregistros.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // label6
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(64, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(284, 23);
-            this.textBox1.TabIndex = 0;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(-1, 115);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(152, 25);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Filtrar por cargo";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(-1, 78);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(155, 25);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Filtrar por bairro";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(-1, 46);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(160, 25);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Filtrar por cidade";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(138, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(196, 25);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Filtrar todos registros";
+            // 
+            // txtcidade
+            // 
+            this.txtcidade.BackColor = System.Drawing.Color.DodgerBlue;
+            this.txtcidade.Location = new System.Drawing.Point(162, 46);
+            this.txtcidade.Name = "txtcidade";
+            this.txtcidade.Size = new System.Drawing.Size(304, 23);
+            this.txtcidade.TabIndex = 6;
+            // 
+            // txtcargo
+            // 
+            this.txtcargo.BackColor = System.Drawing.Color.DodgerBlue;
+            this.txtcargo.Location = new System.Drawing.Point(162, 117);
+            this.txtcargo.Name = "txtcargo";
+            this.txtcargo.Size = new System.Drawing.Size(304, 23);
+            this.txtcargo.TabIndex = 8;
+            // 
+            // txtbairro
+            // 
+            this.txtbairro.BackColor = System.Drawing.Color.DodgerBlue;
+            this.txtbairro.Location = new System.Drawing.Point(162, 83);
+            this.txtbairro.Name = "txtbairro";
+            this.txtbairro.Size = new System.Drawing.Size(304, 23);
+            this.txtbairro.TabIndex = 7;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnbuscarcolaborador);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.txtcpf);
+            this.panel3.Controls.Add(this.txtnome);
+            this.panel3.Controls.Add(this.txtemail);
+            this.panel3.Location = new System.Drawing.Point(12, 13);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(563, 155);
+            this.panel3.TabIndex = 9;
+            // 
+            // btnbuscarcolaborador
+            // 
+            this.btnbuscarcolaborador.BackColor = System.Drawing.Color.White;
+            this.btnbuscarcolaborador.Image = ((System.Drawing.Image)(resources.GetObject("btnbuscarcolaborador.Image")));
+            this.btnbuscarcolaborador.Location = new System.Drawing.Point(483, 60);
+            this.btnbuscarcolaborador.Name = "btnbuscarcolaborador";
+            this.btnbuscarcolaborador.Size = new System.Drawing.Size(75, 63);
+            this.btnbuscarcolaborador.TabIndex = 14;
+            this.btnbuscarcolaborador.UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(-2, 115);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(142, 25);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Buscar por CPF";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(-2, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(157, 25);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Buscar por email";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(-2, 46);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(158, 25);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Buscar por nome";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(131, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(180, 25);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Buscar colaborador";
+            // 
+            // txtcpf
+            // 
+            this.txtcpf.Location = new System.Drawing.Point(162, 117);
+            this.txtcpf.Name = "txtcpf";
+            this.txtcpf.Size = new System.Drawing.Size(304, 23);
+            this.txtcpf.TabIndex = 10;
+            // 
+            // txtnome
+            // 
+            this.txtnome.Location = new System.Drawing.Point(162, 46);
+            this.txtnome.Name = "txtnome";
+            this.txtnome.Size = new System.Drawing.Size(304, 23);
+            this.txtnome.TabIndex = 3;
+            // 
+            // txtemail
+            // 
+            this.txtemail.Location = new System.Drawing.Point(162, 83);
+            this.txtemail.Name = "txtemail";
+            this.txtemail.Size = new System.Drawing.Size(304, 23);
+            this.txtemail.TabIndex = 4;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.btnbuscartodos);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -409,24 +570,48 @@
             this.panel2.Size = new System.Drawing.Size(1170, 60);
             this.panel2.TabIndex = 3;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(909, 15);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(137, 25);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Mostrar todos ";
+            // 
+            // btnbuscartodos
+            // 
+            this.btnbuscartodos.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnbuscartodos.Image = ((System.Drawing.Image)(resources.GetObject("btnbuscartodos.Image")));
+            this.btnbuscartodos.Location = new System.Drawing.Point(1052, 8);
+            this.btnbuscartodos.Name = "btnbuscartodos";
+            this.btnbuscartodos.Size = new System.Drawing.Size(56, 42);
+            this.btnbuscartodos.TabIndex = 18;
+            this.btnbuscartodos.UseVisualStyleBackColor = false;
+            this.btnbuscartodos.Click += new System.EventHandler(this.btnbuscartodos_Click);
+            // 
             // FormReg_Funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1170, 690);
+            this.ClientSize = new System.Drawing.Size(1170, 649);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvreg);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Location = new System.Drawing.Point(189, 100);
+            this.Location = new System.Drawing.Point(185, 1);
             this.MdiChildrenMinimizedAnchorBottom = false;
             this.Name = "FormReg_Funcionario";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FormReg_Funcionario";
             this.Load += new System.EventHandler(this.FormReg_Funcionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvreg)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -439,9 +624,6 @@
         private Label label1;
         private Panel panel1;
         private Panel panel2;
-        private Button btnsalvaralteracoes;
-        private Button btnpesquisar;
-        private TextBox textBox1;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn Nome;
         private DataGridViewTextBoxColumn Email;
@@ -467,5 +649,25 @@
         private DataGridViewTextBoxColumn Complemento;
         private DataGridViewTextBoxColumn Bairro;
         private DataGridViewTextBoxColumn Cidade;
+        private TextBox txtnome;
+        private Panel panel3;
+        private MaskedTextBox txtcpf;
+        private TextBox txtemail;
+        private TextBox txtcargo;
+        private TextBox txtbairro;
+        private TextBox txtcidade;
+        private Panel panel4;
+        private Label label6;
+        private Label label7;
+        private Label label8;
+        private Label label9;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Button btnfiltrarregistros;
+        private Button btnbuscarcolaborador;
+        private Button btnbuscartodos;
+        private Label label10;
     }
 }

@@ -24,6 +24,8 @@ namespace Folha_Pagamento.Forms
 
 
             InitializeComponent();
+            
+
             f = func;
             cargo = DataAcessObject.CargoDAO.ObterPorNome(func.Cargo);
 
@@ -134,7 +136,7 @@ namespace Folha_Pagamento.Forms
                 MessageBox.Show("Insira a carga horaria");
                 return;
             }
-
+            
             double salarioBruto = double.Parse(dgvsalario.Rows[0].Cells[1].Value.ToString());
             double CargaHoraria = double.Parse(dgvBancodehoras.Rows[0].Cells[1].Value.ToString());
             // MessageBox.Show($"{CHoraria - horas} , horas");
@@ -145,12 +147,14 @@ namespace Folha_Pagamento.Forms
             Holerite holerite = new Holerite();
             holerite = RegistrarHolerite();
 
-            
-            Folha_Pagamento.Forms.FormSalvarHolerite form = new FormSalvarHolerite(holerite);
+
+            Forms.FormHolerite form = new FormHolerite(holerite,receber);
             form.ShowDialog();
 
-           // Folha_Pagamento.Forms.FormHolerite form = new Folha_Pagamento.Forms.FormHolerite(holerite);
-           // form.ShowDialog();
+            DataAcessObject.HoleriteDAO.InserirHolerite(holerite);
+            
+            
+           
 
         }
         public Holerite RegistrarHolerite()
@@ -161,11 +165,10 @@ namespace Folha_Pagamento.Forms
             double horas = double.Parse(dgvBancodehoras.Rows[0].Cells[2].Value.ToString());
             double salarioBruto = double.Parse(dgvsalario.Rows[0].Cells[1].Value.ToString());
             double CargaHoraria = double.Parse(dgvBancodehoras.Rows[0].Cells[1].Value.ToString());
-            // MessageBox.Show($"{CHoraria - horas} , horas");
+            
             double receber = Regras_de_Negocio.CalcularDescontos.CalcularHorasTrabalhadas(salarioBruto,horas,CargaHoraria);
             double sliquido = double.Parse(dgvsalario.Rows[1].Cells[1].Value.ToString());
-            //CalcularHoras();
-            //holerite.Salario_Liquido = double.Parse(dgvsalario.Rows[1].Cells[1].Value.ToString());
+            
             holerite.Salario_Liquido = sliquido - receber;
             holerite.Data_Emissao = DateTime.Now;
             holerite.Mes_Ano_Pagamento = DateTime.Now;
@@ -181,9 +184,7 @@ namespace Folha_Pagamento.Forms
             holerite.Dias_Trabalhados = int.Parse(dgvBancodehoras.Rows[0].Cells[3].Value.ToString());
             holerite.Horas_Trabalhadas = horas;
             holerite.Total_Desc = holerite.Fgts * holerite.Desc_Dias + holerite.Inss;
-            //bool Confirma = DataAcessObject.HoleriteDAO.InserirHolerite(holerite);
             
-            //holerite.Salario_Liquido = holerite.Salario_Liquido - 
            
 
 
@@ -218,8 +219,7 @@ namespace Folha_Pagamento.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Folha_Pagamento.Forms.FormBH form = new FormBH();
-            form.ShowDialog();
+            
         }
 
         private double CalcularHoras()

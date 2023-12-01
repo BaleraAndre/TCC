@@ -44,5 +44,11 @@ namespace Folha_Pagamento.Forms
             txtcidade.Text = funcionario.Cidade;
 
         }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            DataAcessObject.FuncionarioDAO.RemoverRegistro(txtnome.Text);
+            this.Close();
+        }
     }
 }

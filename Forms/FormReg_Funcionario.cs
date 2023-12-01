@@ -14,44 +14,23 @@ namespace Folha_Pagamento.Forms
 {
     public partial class FormReg_Funcionario : Form
     {
+        public List<Funcionario> funcionarios = new List<Funcionario>(Folha_Pagamento.DataAcessObject.FuncionarioDAO.ObterTodos());
         public FormReg_Funcionario()
         {
-            InitializeComponent();
-            List<Funcionario> funcionarios = new List<Funcionario>(Folha_Pagamento.DataAcessObject.FuncionarioDAO.ObterTodos());
-            int count = funcionarios.Count;
-            foreach (Funcionario func in funcionarios)
-            {
-                dgvreg.Rows.Add(func.ID, func.Nome_Completo, func.Email, func.Telefone, func.CPF, func.RG, func.Orgao_Emissor,
-                    func.Nome_Mae, func.Nome_Pai, func.Data_Admissao, func.Cargo, func.Pis, func.Estado_Civil, func.Grau_Escolaridade, func.Regime_Trabalhista,
-                    func.Data_Nascimento, func.Raca, func.Sexo, func.Pais_Origem, func.CEP, func.Endereco, func.Numero, func.Complemento,
-                    func.Bairro, func.Cidade
-                    );
-            }
-
+            InitializeComponent();                     
+            var horizontalScrollBar = dgvreg.Controls.OfType<HScrollBar>().FirstOrDefault();
         }
 
         private void FormReg_Funcionario_Load(object sender, EventArgs e)
         {
-
-           // Forms.FormHoleriteGerar form = new FormHoleriteGerar();
-            //form.ShowDialog();
-
-            //Folha_Pagamento.DataAcessObject.FuncionarioDAO.ObterTodos();
-
-
-
-
-
-
         }
 
         private void dgvreg_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                // Obter a linha selecionada
+                
                 DataGridViewRow row = dgvreg.Rows[e.RowIndex];
-
                 Funcionario a = new Funcionario();
                 a.ID = Convert.ToInt32(row.Cells["ID"].Value);
                 a.Nome_Completo = row.Cells["Nome"].Value.ToString();
@@ -71,8 +50,7 @@ namespace Folha_Pagamento.Forms
                 a.Data_Nascimento = row.Cells["Data_Nascimento"].Value.ToString();
                 a.Raca = row.Cells["Raca"].Value.ToString();
                 a.Sexo = row.Cells["Sexo"].Value.ToString();
-                a.Pais_Origem = row.Cells["Pais_Origem"].Value.ToString();
-               // a.Senha = row.Cells["Senha"].Value.ToString();
+                a.Pais_Origem = row.Cells["Pais_Origem"].Value.ToString();               
                 a.CEP = row.Cells["CEP"].Value.ToString();
                 a.Endereco = row.Cells["Endereco"].Value.ToString();
                 a.Numero = row.Cells["Numero"].Value.ToString();
@@ -82,16 +60,23 @@ namespace Folha_Pagamento.Forms
 
                 Forms.FormAtualizarFuncionario form = new FormAtualizarFuncionario(a);
                 form.ShowDialog();
-
-                // Extrair os dados das células dessa linha
-                //int id = Convert.ToInt32(row.Cells["ColumnID"].Value);
-                //string name = row.Cells["ColumnName"].Value.ToString();
-                //int age = Convert.ToInt32(row.Cells["ColumnAge"].Value);
-
-                // Faça o que você deseja com os dados (por exemplo, exibi-los em caixas de diálogo ou armazená-los em variáveis)
-               // MessageBox.Show($"ID: {id}\nName: {name}\nAge: {age}");
+               
             }
 
+
+        }
+
+        private void btnbuscartodos_Click(object sender, EventArgs e)
+        {
+            int count = funcionarios.Count;
+            foreach (Funcionario func in funcionarios)
+            {
+                dgvreg.Rows.Add(func.ID, func.Nome_Completo, func.Email, func.Telefone, func.CPF, func.RG, func.Orgao_Emissor,
+                    func.Nome_Mae, func.Nome_Pai, func.Data_Admissao, func.Cargo, func.Pis, func.Estado_Civil, func.Grau_Escolaridade, func.Regime_Trabalhista,
+                    func.Data_Nascimento, func.Raca, func.Sexo, func.Pais_Origem, func.CEP, func.Endereco, func.Numero, func.Complemento,
+                    func.Bairro, func.Cidade
+                    );
+            }
 
         }
     }
